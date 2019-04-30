@@ -94,7 +94,7 @@
               }
           },
           imgError() {
-              this.poster = require('../assets/LostSource.png');
+              this.poster = require('../assets/LostSource.png')
           },
           goToDetail() {
               this.$router.push({name: "movie-detail", params: {id: this.id}})
@@ -103,7 +103,7 @@
       watch: {
         detail: {
           handler(newValue, oldValue){
-            this.init();
+            this.init()
           },
           deep: true
         }

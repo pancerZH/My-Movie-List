@@ -174,7 +174,7 @@
                     this.movies = response.data
                     this.detail = this.movies
                         .filter((info) => {
-                        const text = Object.values(info._id).join('').toLowerCase();
+                        const text = Object.values(info._id).join('').toLowerCase()
                         return text.search(this.$route.params.id) >= 0
                         })[0]
                     this.totalMovie = this.movies.length
@@ -206,10 +206,10 @@
                 }
             },
             imgError() {
-                this.poster = require('../assets/LostSource.png');
+                this.poster = require('../assets/LostSource.png')
             },
             imgListError(movie) {
-                movie.poster = require('../assets/LostSource.png');
+                movie.poster = require('../assets/LostSource.png')
             },
             goToDetail(movie) {
               this.$router.push({name: "movie-detail", params: {id: movie._id}})
@@ -222,7 +222,7 @@
             randomRes() {
                 // var arr = this.movies
                 var Arr = this.movies
-                var n = Math.floor(Math.random() * Arr.length + 1)-1;
+                var n = Math.floor(Math.random() * Arr.length + 1)-1
                 if(n > 200-6)
                     return Arr.slice(194, 200)
                 else
@@ -239,7 +239,7 @@
         },
         watch: {
             '$route' (to, from) {
-                this.$router.go(0);
+                this.$router.go(0)
             }
         },
     }

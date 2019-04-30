@@ -54,7 +54,7 @@
             boardingRes() {
             var conditionList = this.movieList
                     .filter((info) => {
-                    const text = Object.values(info.genres).join('____').toLowerCase();
+                    const text = Object.values(info.genres).join('____').toLowerCase()
                     return text.search(this.genre.toLowerCase()) >= 0
                     })
             conditionList = conditionList.sort(sortByRating)
@@ -64,7 +64,7 @@
             totalRes() {
             var conditionList = this.movieList
                     .filter((info) => {
-                    const text = Object.values(info.genres).join('____').toLowerCase();
+                    const text = Object.values(info.genres).join('____').toLowerCase()
                     return text.search() >= 0
                     })
             conditionList = conditionList.sort(sortByRating)
